@@ -62,21 +62,4 @@ bot.on('document', async (msg) => {
       outputPath,
       JSON.stringify(results, null, 2),
       'utf8'
-    );
-
-    await bot.sendDocument(chatId, outputPath, {
-      caption: 'তোমার JSON ফলাফল তৈরি হয়েছে।'
-    });
-  } catch (error) {
-    await bot.sendMessage(
-      chatId,
-      `JSON প্রসেস করতে সমস্যা হয়েছে: ${error.message}`
-    );
-  } finally {
-    if (outputPath && fs.existsSync(outputPath)) {
-      fs.unlinkSync(outputPath);
-    }
-  }
-});
-
-console.log('Bot started');
+  tI
